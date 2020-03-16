@@ -19,5 +19,10 @@ class MyWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
+        
+        // フルスクリーン時に表示するための設定
+        self.myWindow.styleMask.insert(.nonactivatingPanel)
+        self.myWindow.collectionBehavior.insert(.canJoinAllSpaces)
+        self.myWindow.collectionBehavior.insert(.fullScreenAuxiliary)
     }
 }

@@ -57,11 +57,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             myWindowController.windowLevelLabel.stringValue = windowSetting[WindowControllerPropertyKey.nameKey] as! String
             myWindowController.myWindow.level               = windowSetting[WindowControllerPropertyKey.windowLevelKey] as! NSWindow.Level
             
-            // フルスクリーン時に表示するための設定
-            myWindowController.myWindow.styleMask.insert(.nonactivatingPanel)
-            myWindowController.myWindow.collectionBehavior.insert(.canJoinAllSpaces)
-            myWindowController.myWindow.collectionBehavior.insert(.fullScreenAuxiliary)
-            
             myWindowControllerList.append(myWindowController)
         }
     }
